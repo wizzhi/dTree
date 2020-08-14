@@ -222,17 +222,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         // Not first marriage
         if (d.number > 0) {
-          ny -= Math.round(nodeHeight * 8 / 10);
+          ny -= d.number * 8;
         }
 
         var linedata = [{
           x: d.source.x,
           y: d.source.y
         }, {
-          x: Math.round(d.source.x + nodeWidth * 6 / 10),
-          y: d.source.y
-        }, {
-          x: Math.round(d.source.x + nodeWidth * 6 / 10),
+          x: d.source.x,
           y: ny
         }, {
           x: d.target.marriageNode.x,
